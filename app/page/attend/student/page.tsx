@@ -9,7 +9,7 @@ export default function Attendance() {
   const [date, setDate] = useState("");
   const [status, setStatus] = useState("present");  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
     try {
@@ -18,7 +18,7 @@ export default function Attendance() {
         status,
         date, 
       });
-      alert("Attendance Create successfully!");
+      alert("Attendance created successfully!");
       // Clear form
       setName("");
       setEmail("");
